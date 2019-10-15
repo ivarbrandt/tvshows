@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TV Shows</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+    <h1 style="text-align:center">Edit Show {{ show.id }}</h1>
+    <form action="/shows/{{show.id}}/update" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            Title<input type="text" class="form-control" name="title">
+            Network<input type="text" class="form-control" name="network">
+            Release Date<input type="date" class="form-control" name="release_date">
+            Description<input type="textarea" class="form-control" name="description">
+            <input type="submit" style="margin-top:10px" value="Update"></input>
+        </div>
+    </form>
+    <div>
+        <a href="/shows/{{show.id}}">Go To Show</a>
+    </div>
+    <div>
+        <a href="/shows">Go Back</a>
+    </div>
+</div>
+    
+</body>
+</html>

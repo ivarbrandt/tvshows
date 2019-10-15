@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Show Details</title>
+</head>
+<body>
+<div class="container">
+    <h1>TV Show {{ show.id }}</h1>
+    <h4>Title: {{ show.title }}</h4>
+    <h4>Network: {{show.network }}</h4>
+    <h4>Release Date: {{ show.release_date }}</h4>
+    <h4>Description: {{ show.description }}</h4>
+    <br>
+    <h4>Last Updated: {{ show.updated_at }}</h4>
+    <a href="/shows/{{show.id}}/edit">Edit</a>
+    <a href="/shows/{{show.id}}/destroy">Delete</a>
+    <a href="/shows">Go Back</a>
+</div>
+</body>
+</html>
